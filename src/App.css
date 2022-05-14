@@ -2,37 +2,111 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.game-card {
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-div {
+  width: 280px;
+  margin: 0;
+}
+
+.input-export {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Input */
+
+.input-container {
+  margin: 1rem 0;
+  width: 300px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.label {
+  position: absolute;
+  left: 10px;
+  top: 14px;
+  transition: all 0.2s;
+  padding: 0 2px;
+  z-index: 1;
+  color: black;
+}
+
+.text-input {
+  padding: 0.8rem;
+  width: calc(100% - 1.6rem - 4px);
+  height: 100%;
+  border: 2px solid #a0a0a0;
+  background: white;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s;
+  color: black;
+}
+
+.date-input {
+  padding: 0.8rem;
+  width: calc(100% - 1.6rem - 4px);
+  height: 100%;
+  border: 2px solid #a0a0a0;
+  background: white;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s;
+  color: black;
+}
+
+.label::before {
+  content: "";
+  height: 5px;
+  background: white;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  width: 100%;
+  z-index: -1;
+}
+
+.text-input:focus {
+  border: 2px solid #D40501;
+}
+
+.text-input:focus + .label,
+.filled {
+  top: -10px;
+  color: #D40501;
+  font-size: 14px;
+}
+
+.text-input::placeholder {
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.text-input:focus::placeholder {
+  opacity: 1;
+}
+
+.date-input:focus {
+  border: 2px solid #D40501;
+}
+
+.date-input::placeholder {
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.date-input:focus::placeholder {
+  opacity: 1;
 }
